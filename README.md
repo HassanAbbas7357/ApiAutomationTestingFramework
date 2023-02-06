@@ -22,6 +22,7 @@ Advanced API Automation Framework for building testcases and generating intresti
 ![image](https://drive.google.com/uc?export=view&id=1cIwTwVH03hH724nTcelNKeKD1dRkF-S6)
 
 
+
 ![image](https://drive.google.com/uc?export=view&id=1QmJmKJcGoGs9n_eTQnctsswWL17vvk6n)
 
 
@@ -35,13 +36,13 @@ pip3 install -r requirements.txt
 ```
 #### Use this command to run your testcases
 ```bash
-pytest Tests --alluredir=reports --screenshot=on --browser CHROME  -v -s --headless 0  
+pytest Tests --alluredir=reports   -v -s
 ```
 ```bash
-pytest Tests --alluredir=reports --screenshot=on --browser FIREFOX  -v -s --headless 1  
+pytest Tests --alluredir=reports  -v -s
 ```
 ```bash
-pytest Tests --alluredir=reports --screenshot=on --browser SAFARI  -v -s --headless 0  
+pytest Tests --alluredir=reports  -v -s
 ```
 #### Use this command to generate and preview the Allure report
 ```bash
