@@ -1,0 +1,6 @@
+__pycache__
+.pytest_cache
+reports
+Tests/__pycache__
+*.pyc
+*.pyc
