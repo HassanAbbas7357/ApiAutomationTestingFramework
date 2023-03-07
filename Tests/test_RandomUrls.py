@@ -1,6 +1,8 @@
 from conftest import *
 # from pytest_schema import schema, exact, like
+from pytest_schema import schema
 import os
+import allure
 
 # below is the dummy testcase remove it to start writing your own without having to worry about the configurations wink :wink:
 
@@ -56,7 +58,6 @@ def test_visitSite():
     resp = requests.get("https://jsonplaceholder.typicode.com/posts").json()
     print(resp)
     # print(os.getcwd())
-
 
 
 # def getSchemafromJSON(filename):
