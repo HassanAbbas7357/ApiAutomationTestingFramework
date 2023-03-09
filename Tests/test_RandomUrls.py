@@ -26,16 +26,20 @@ Then new account should be created with message "Account created successfully" i
 And 200 in HTTP Response code
 Then I get OTP on Email
 """)
+
 # @allure.testcase(data.register_url, "Registration Api url")
 @pytest.mark.order(1)
 def test_visitSite():
     print(basecConfig.email)
+    payload = {}
+    headers = f'asdasd{enter_payLoad(payload)}'
     resp = requests.get("https://jsonplaceholder.typicode.com/posts").json()
-
+    
     print(resp)
     print(type(resp))
     capturePage()
     getSchemafromJSONAndCompareSchema(resp, "test1_schema.json")
     capturePage()
+    
 
     # print(os.getcwd())

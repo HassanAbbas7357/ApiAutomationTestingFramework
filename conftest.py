@@ -5,6 +5,7 @@ from base_helpers import *
 from user_data import userData
 import requests,pytest_schema
 
+# main config file
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -26,7 +27,7 @@ class Storage:
     requestId = None
     skipAll = False
     skipAllDummy = False
-    failedTestCases = []
+    # failedTestCases = []
 
 
 basecConfig = None

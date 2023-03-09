@@ -33,7 +33,7 @@ def get_randomUsername():
     return ''.join(random.choice(string.ascii_letters) for _ in range(15)) + "1243"
 
 
-@allure.step("Enter Payload{0}")
+@allure.step("Enter Payload {0}")
 def enter_payLoad(payload):
     return payload
 
@@ -44,4 +44,8 @@ def getSchemafromJSONAndCompareSchema(JsonResp, filename):
     with open(filepath, 'r') as f:
         schema = json.load(f)
 
-    jsonschema.validate(JsonResp, schema)
+    try:
+        jsonschema.validate(JsonResp, schema)
+    except Exception as ex:
+        pytest.fail(f'Test Failed due Schema mismatched {ex}')
+
